@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom'
 import { searchUser } from '../redux/UserReducer';
 
 const Navbar = () => {
+    // 1. create a useState to save the search value inside Navbar component
     const [searchData, setSearchData] = useState('');
+
     const dispatch = useDispatch();
 
     const users = useSelector((state) => state.users.users);
 
+    // 3. Sending the local state as a payload to update global search state
+    // 4. Using useEffect to dispatch the action everytime the state changes
     useEffect(() => {
         dispatch(searchUser(searchData));
         // console.log(searchData);

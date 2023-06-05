@@ -60,6 +60,7 @@ const userSlice = createSlice({
         users: [],
         loading: false,
         error: null,
+        // 2. creating a global state to hold search data value
         searchDataState: ""
     },
 

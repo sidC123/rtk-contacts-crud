@@ -31,6 +31,12 @@ const Home = () => {
 
                     <div className="container">
                         <h1 className="text-center gradient-text my-4">CRUD App with JSON Server</h1>
+                        {/* 
+                            1. Creating inputs for changing gender filter
+                            2. Create a local state to hold the checked radio value
+                            3. Add checked logic on all inputs (all radio input will be checked by default)
+                            4. Add onchange event on the inputs (values should match with the schema)                       
+                        */}
                         <div className="mb-3 d-flex gap-5 justify-content-center">
                             <label htmlFor="age" className="form-label">Filter By: </label>
                             <div className="form-check">
@@ -53,6 +59,15 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="row row-cols-md-3 row-cols-2 gy-4">
+                            {/* 
+                                1. Sequence of filter first serach then gender based filter
+                                2. Make sure to render the data as it is when search data in blank
+                                3. matching the search string with the name of objects and returning that array only.
+                                -------------
+                                4. Apply logics to return an array based on gender selected
+                                5. make sure to return the array as it is when 'all' input is checked
+                                6. Map out the final array
+                            */}
                             {
                                 users && users.filter((e) => {
                                     if (searchDataState.length === 0) {
