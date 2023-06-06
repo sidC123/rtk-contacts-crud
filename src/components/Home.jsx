@@ -62,10 +62,10 @@ const Home = () => {
                             {/* 
                                 1. Sequence of filter first serach then gender based filter
                                 2. Make sure to render the data as it is when search data in blank
-                                3. matching the search string with the name of objects and returning that array only.
+                                3. Matching the search string with the name of objects and returning that array only.
                                 -------------
                                 4. Apply logics to return an array based on gender selected
-                                5. make sure to return the array as it is when 'all' input is checked
+                                5. Make sure to return the array as it is when 'all' input is checked
                                 6. Map out the final array
                             */}
                             {
